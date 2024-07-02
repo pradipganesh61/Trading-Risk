@@ -12,4 +12,4 @@ Svelte: A framework for building high-performance user interfaces
 JavaScript: Core scripting language for logic and interactivity
 CSS: Styling for a clean and responsive design
 
-[!Image1]
+![Image1](public/images/Image1.png)
