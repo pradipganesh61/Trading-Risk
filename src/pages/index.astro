@@ -1,0 +1,108 @@
+---
+import FormRiskCalculator from '../components/forms/FormRiskCalculator.svelte';
+---
+
+<html lang="en">
+	<head>
+
+		<!-- Essentials -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="generator" content={Astro.generator}/>
+		
+		<!-- Favicons -->
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-57x57.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-114x114.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-72x72.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-144x144.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-60x60.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-120x120.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-76x76.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://websorcier.com/assets/icons/favicons/apple-touch-icon-152x152.png"/>
+		<link rel="icon" type="image/png" href="https://websorcier.com/assets/icons/favicons/favicon-196x196.png" sizes="196x196"/>
+		<link rel="icon" type="image/png" href="https://websorcier.com/assets/icons/favicons/favicon-96x96.png" sizes="96x96"/>
+		<link rel="icon" type="image/png" href="https://websorcier.com/assets/icons/favicons/favicon-32x32.png" sizes="32x32"/>
+		<link rel="icon" type="image/png" href="https://websorcier.com/assets/icons/favicons/favicon-16x16.png" sizes="16x16"/>
+		<link rel="icon" type="image/png" href="https://websorcier.com/assets/icons/favicons/favicon-128.png" sizes="128x128"/>
+
+		<!-- Favicons Meta -->
+		<meta name="application-name" content=" "/>
+		<meta name="msapplication-TileColor" content="#FFFFFF"/>
+		<meta name="msapplication-TileImage" content="https://websorcier.com/assets/icons/favicons/mstile-144x144.png"/>
+		<meta name="msapplication-square70x70logo" content="https://websorcier.com/assets/icons/favicons/mstile-70x70.png"/>
+		<meta name="msapplication-square150x150logo" content="https://websorcier.com/assets/icons/favicons/mstile-150x150.png"/>
+		<meta name="msapplication-wide310x150logo" content="https://websorcier.com/assets/icons/favicons/mstile-310x150.png"/>
+		<meta name="msapplication-square310x310logo" content="https://websorcier.com/assets/icons/favicons/mstile-310x310.png"/>
+
+		<!-- SEO Tags -->
+		<meta name="title" content="Stock Risk Calculator"/>
+		<meta name="description" content="Simple stock trading calculator for calculating approximate entry, exit & stop loss positions."/>
+		<meta name="keywords" content="trading, stock market,risk,calculator,open-source"/>
+		<meta name="robots" content="index, follow"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="English"/>
+
+		<!-- Title -->
+		<title>Stocks Risk Calculator</title>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+		<!-- App Stylesheets -->
+		<link rel="stylesheet" href="/assets/css/app.css"/>
+
+		<!-- Misc Styles -->
+		<style>
+			.github-corner:hover .octo-arm {
+				animation: octocat-wave 560ms ease-in-out;
+			}
+
+			@keyframes octocat-wave {
+				0%,
+				100% {
+					transform: rotate(0);
+				}
+				20%,
+				60% {
+					transform: rotate(-25deg);
+				}
+				40%,
+				80% {
+					transform: rotate(10deg);
+				}
+			}
+
+			@media (max-width: 500px) {
+				.github-corner:hover .octo-arm {
+					animation: none;
+				}
+				.github-corner .octo-arm {
+					animation: octocat-wave 560ms ease-in-out;
+				}
+			}
+		</style>
+
+	</head>
+	<body class="bg-gray-50 font-body">
+		<div class="app flex flex-col min-h-screen">
+			<header class="pt-10 px-6 w-full sm:max-w-5xl mx-auto">
+				<div class="bg-red-100 border-2 border-red-500 rounded-lg shadow-lg px-4 py-3">
+					<span class="text-red-500 text-base">
+						<strong class="text-lg">Disclaimer:</strong>
+						This calculation works for me & isn't any investment advice or strategy.
+						<strong>Please use it at your own risk.</strong>
+					</span>
+				</div>
+			</header>
+			<main class="py-1 px-1 flex-1 flex flex-col justify-center">
+				<FormRiskCalculator client:visible/>
+			</main>
+			<footer class="px-3 py-4 text-center">
+				<p class="text-sm" style="color: azure;">Developed & maintained with by <a href="https://github.com/pradipganesh61" class="text-blue-500 font-semibold" target="_blank">Pradip Ganesh</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
